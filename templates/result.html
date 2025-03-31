@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loan Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    
+    <div class="result-section">
+      <p><strong>Loan Status Prediction:</strong> {{ prediction }}</p>
+    </div>
+    
+    <div class="result-section">
+      <h2>Model Performance</h2>
+      <p>Model Accuracy on Test Data: <strong>{{ accuracy }}</strong></p>
+      
+      <h3>Classification Report (Test Data)</h3>
+      <pre>{{ report }}</pre>
+    </div>
+    
+    <div class="result-section">
+      <h3>Feature Importance</h3>
+      <img src="{{ url_for('static', filename='feature_importance.png') }}" alt="Feature Importance Bar Chart">
+    </div>
+    
+    <div class="result-section">
+      <h3>Confusion Matrix (Train Data)</h3>
+      <img src="{{ url_for('static', filename='confusion_matrix_train.png') }}" alt="Train Confusion Matrix">
+    </div>
+    
+    <div class="result-section">
+      <h3>Confusion Matrix (Test Data)</h3>
+      <img src="{{ url_for('static', filename='confusion_matrix_test.png') }}" alt="Test Confusion Matrix">
+    </div>
+    
+    <div class="back-link">
+      <a href="{{ url_for('index') }}">&#8592; Back to Input Form</a>
+    </div>
+  </div>
+</body>
+</html>

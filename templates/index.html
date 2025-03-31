@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Зээлийн таамаглал</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>ЗЭЭЛИЙН ОНООНЫ СИСТЕМИЙГ</h1>
+    <h1>МАШИН СУРГАЛТЫН АРГААР САЙЖРУУЛАХ НЬ</h1>
+    <form action="{{ url_for('predict') }}" method="POST">
+      <!-- Gender талбар -->
+      <div class="form-group">
+        <label for="gender">Хүйс:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>сонгох</option>
+          <option value="Male">Эрэгтэй</option>
+          <option value="Female">Эмэгтэй</option>
+        </select>
+      </div>
+      
+      <!-- Age талбар -->
+      <div class="form-group">
+        <label for="age">Нас:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <!-- Loan Amount талбар -->
+      <div class="form-group">
+        <label for="loan_amount">Зээлийн хэмжээ:</label>
+        <input type="number" id="loan_amount" name="loan_amount" step="0.01" required>
+      </div>
+      
+      <button type="submit">Таамаглах</button>
+    </form>
+  </div>
+</body>
+</html>

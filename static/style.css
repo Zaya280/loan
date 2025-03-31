@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    text-align: center;
+  }
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    margin: 0 auto; /* center the form */
+  }
+
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  input, select {
+    padding: 20px;
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+  
